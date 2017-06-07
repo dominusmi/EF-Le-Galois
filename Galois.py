@@ -1,7 +1,7 @@
 import serial
 import sys
 import os
-from Serial_hook import Serial_hook
+from GPS import GPS
 from threading import Thread
 from time import sleep
 
@@ -37,7 +37,7 @@ while True:
             ## Creates thread which handles writing GPS data to file
             if( connected ):
                 try:
-                    serial_hook = Serial_hook(ser)
+                    GPS = GPS(ser)
                 except Exception as e:
                     print "Error on thread"
                     sys.exit()
@@ -48,6 +48,6 @@ while True:
     except KeyboardInterrupt:
         print "Ah! KeyboardInterrupt!"
         ## Stops the thread
-        serial_hook.stop()
+        GPS.stop()
         ## Clean exit
         sys.exit(0)
