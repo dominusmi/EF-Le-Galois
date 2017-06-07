@@ -38,6 +38,7 @@ while True:
             if( connected ):
                 try:
                     GPS = GPS(ser)
+                    print "Running.."
                 except Exception as e:
                     print "Error on thread"
                     sys.exit()
