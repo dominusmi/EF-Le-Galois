@@ -15,7 +15,7 @@ class GPS:
         self.alt    = 0
         self.v      = 0  ## In km/h
         self.heading= ''
-
+        
 
 
         ## Variables to do with the
